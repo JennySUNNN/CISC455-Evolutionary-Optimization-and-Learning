@@ -1,7 +1,9 @@
 # CISC455-Project
 The goal of this project (solo) is to exercise on implementing an evolutionary algorithm to solve application problems following the workflow:
 1. Identify an application problem
+University Class Scheduing Problem
 2. Determine if EA is a good candidate solver
+It is a good solver, because this problem 
 3. Design an EA for the application problem
 4. Implement your EA
 5. Compare your EA performance to at least one other alternative algorithm
