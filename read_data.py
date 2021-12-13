@@ -8,11 +8,11 @@ def get_city_names(city_name_path):
         city = city.rstrip('\n')
         city_list.append(city)
     
-    city_num_list = []
+    city_id_list = []
     for i in range(len(city_list)):
-        city_num_list.append(i)
+        city_id_list.append(i)
 
-    return city_list,city_num_list
+    return city_list,city_id_list
     
 
 def get_distance(distance_path):

@@ -1,16 +1,24 @@
+"""
+My collection of all variation operators functions, including crossover and mutation.
+Student number: 20082675
+Student name: Jenny Sun
+"""
 
 import random
 
 
 # Crossover:
 def permutation_cut_and_crossfill (parent1, parent2):
-    """cut-and-crossfill crossover for permutation representations"""
+    """Perform cut and crossfill crossover on two given parents to produce offsprings.
 
+    Args:
+        parent1, parent2: list - individual solution that been selected as parent
+    Returns:
+        offspring1, offspring2: list - individual solution that been created by performing crossover of two parents.
+    """
     offspring1 = []
     offspring2 = []
     
-    # student code begin
-    # method: cut and crossfill
     individual_length = len(parent1)
 
     # generate a random crossover point
@@ -34,8 +42,6 @@ def permutation_cut_and_crossfill (parent1, parent2):
             
             if parent1[i] not in offspring2:
                 offspring2.append(parent1[i]) 
-
-    # student code end
     
     return offspring1, offspring2
 
@@ -43,10 +49,10 @@ def permutation_cut_and_crossfill (parent1, parent2):
 
 # Mutation:
 def inversion_mutation (individual):
+    # This method is specifically designed for TSP
 
     rand1 = random.randint(0,len(individual)-1)
     rand2 = random.randint(0,len(individual)-1)
-    print(rand1,rand2)
 
     # Avoid two random integers are same
     while rand2 == rand1:

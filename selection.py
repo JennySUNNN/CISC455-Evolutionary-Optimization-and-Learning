@@ -49,7 +49,10 @@ def mu_plus_lambda(current_pop, current_fitness_list, offspring, offspring_fitne
 
     # ranking current individuals and offsprings according to its fitness_list, in descending order
     # sort the list of tuples [(individual1,fitness_list1),(individual2,fitness_list2),...] based on fitness_list
-    all_tuple_list.sort(reverse=True, key=lambda y:y[1])
+    #all_tuple_list.sort(reverse=True, key=lambda y:y[1])
+
+    all_tuple_list.sort(key=lambda y:y[1])
+
 
     # pick the top mu individuals to be survivors
     survivor_tuple_list = all_tuple_list[0:mu]
