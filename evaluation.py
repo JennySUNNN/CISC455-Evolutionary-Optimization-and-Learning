@@ -5,7 +5,7 @@ Student name: Jenny Sun
 """
 
 def evaluate(individual,start_city_id,dist_matrix):
-    """Evaluate individual's fitness based on the total distance of the path.
+    """Evaluate individual's fitness based on the total travel distance of the path.
     Fitness value aim to be minimized.
 
     Args:
@@ -13,13 +13,13 @@ def evaluate(individual,start_city_id,dist_matrix):
         start_city_id: int - the home city's id (i.e. the city we start at) 
         dist_matrix: numpy array - array arrays of distances from each city to other city.
     Returns:
-        distance: int - the total distance of the individual path
+        distance: int - the total travel distance of the individual path
     """
-    
+
     first_city_id = individual[0]
     last_city_id = individual[-1]
 
-    # Sum the distance of 'the start city to the first city' and 'the last city to the start(home) city' 
+    # Sum the distance  of 'the start city to the first city' and 'the last city to the start(home) city' 
     distance = dist_matrix[start_city_id][first_city_id] + dist_matrix[last_city_id][start_city_id]
     
     for i in range(len(individual)-1):
