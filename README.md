@@ -1,4 +1,6 @@
-# CISC455-Project:
+# CISC455-Final Project:
+
+
 
 To run and output the result: (In terminal) 
 ```
@@ -60,7 +62,7 @@ Below is a brief structure of all modules and functions:
 - evaluate(individual,start_city_id,dist_matrix)
 
 ### parent_selection.py
--  MPS(fitness_list, mating_pool_size)
+- MPS(fitness_list, mating_pool_size)
 - tournament(fitness_list, mating_pool_size, tournament_size)
 
 ### survivor_selection.py
